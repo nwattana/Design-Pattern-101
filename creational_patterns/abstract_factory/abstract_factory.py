@@ -6,20 +6,6 @@
 #   specifying their concrete classes.
 
 
-class AbstractFactory:
-
-    def __init__(self):
-        self.parts = []
-
-    def create_part_a(self):
-        pass
-
-    def create_part_b(self, part):
-        pass
-
-    def __str__(self):
-        return f'AbstractFactory: {self.parts}'
-
 class AbstractPartA:
 
     def __init__(self):
@@ -35,6 +21,20 @@ class AbstractPartB:
 
     def __str__(self):
         return f'AbstractPartB: {self.part}'
+
+class AbstractFactory:
+
+    def __init__(self):
+        self.parts = []
+
+    def create_part_a(self) -> AbstractPartA:
+        pass
+
+    def create_part_b(self, part) -> AbstractPartB:
+        pass
+
+    def __str__(self):
+        return f'AbstractFactory: {self.parts}'
 
 
 
