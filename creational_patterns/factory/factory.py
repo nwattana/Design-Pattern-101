@@ -19,7 +19,7 @@ class Cat(Animal):
         return "Meaow"
 
 class Bird(Animal):
-    body= "2 Leg have wing can fly"
+    body = "2 Leg have wing can fly"
 
 class AnimalFactory:
     def get_animal(self,animaltype=None):
