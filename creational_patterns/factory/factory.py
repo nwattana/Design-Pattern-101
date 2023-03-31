@@ -30,6 +30,9 @@ class AnimalFactory:
                 return Dog()
             case 'bird':
                 return Bird()
+            case _:
+                print("Animal not found")
+                return None
 
 factory = AnimalFactory()
 cat = factory.get_animal('cat')
