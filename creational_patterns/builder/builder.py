@@ -10,7 +10,7 @@ class House:
 
 class BuilderHouse:
     def __init__(self):
-        self.product = House()
+        self.product = {}
         self.type = "Wood"
     
     @property
