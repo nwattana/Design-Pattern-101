@@ -57,11 +57,10 @@ class MyFacade(MyAbstractFacade):
     def result(self):
         print('coffee is ready')
         return "  ~\n" + art("coffee") + art("put the table back")
-    
+
     @property
     def get_coffee(self):
         return self.result()
-
 
 if __name__ == "__main__":
 
@@ -69,3 +68,4 @@ if __name__ == "__main__":
     # print(colored(facade.show.result(), "light_green", attrs=["blink"]))
     print(facade.get_coffee)
     # print(facade.show.get_coffee)
+

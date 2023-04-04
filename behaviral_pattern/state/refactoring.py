@@ -1,6 +1,9 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
+from termcolor import colored
 
+def green(text: str):
+    return colored(text, "green", attrs=["blink"])
 
 class Context:
     """
@@ -51,7 +54,19 @@ class State(ABC):
 
     @context.setter
     def context(self, context: Context) -> None:
+        print(green("State: Setting context"))
         self._context = context
+
+    _testme = "testme"
+    
+    @property
+    def testme(self):
+        return self._testme
+
+    @testme.setter
+    def testme(self, value):
+        print(green("State: Setting testme"))
+        self._testme = value
 
     @abstractmethod
     def handle1(self) -> None:

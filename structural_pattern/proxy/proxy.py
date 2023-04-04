@@ -12,6 +12,7 @@ class MyAbstractProxy(ABC):
     def pre_request(self, *args, **kwargs) -> None:
         pass
 
+    @abstractmethod
     def post_request(self, *args, **kwargs) -> None:
         pass
 
@@ -51,6 +52,6 @@ if __name__ == "__main__":
     print(colored("Client - Service", "light_red", attrs=["blink"]))
     client_code(SimpleService())
     print(colored("Client - Proxy", "light_green", attrs=["blink"]))
-
+    
     proxy = MyProxy(SimpleService())
     client_code(proxy)
